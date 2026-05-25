@@ -1,177 +1,156 @@
 <!DOCTYPE html>
-<html class="light" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Burger's - Pedidos e Pagamento</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#E31837", // Classic Burger Red
-              secondary: "#FFB81C", // Golden Yellow
-              "background-light": "#FDFCFB",
-              "background-dark": "#121212",
-              "card-light": "#FFFFFF",
-              "card-dark": "#1E1E1E",
-            },
-            fontFamily: {
-              display: ["Bebas Neue", "cursive"],
-              body: ["Outfit", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "12px",
-            },
-          },
-        },
-      };
-    </script>
-<style>
-        body { font-family: 'Outfit', sans-serif; }
-        .font-display { font-family: 'Bebas Neue', cursive; }
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Simples</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 60px;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .conteudo {
+            padding: 20px;
+        }
+
+        .conteudo2 {
+            padding: 30px;
+        }
+
+        /* Estilo das imagens */
+        .imagem-esquerda {
+            float: left;
+            width: 250px;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .imagem-direita {
+            float: right;
+            width: 250px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        /* Limpa o float */
+        .limpar {
+            clear: both;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 transition-colors duration-200 min-h-screen">
-<header class="bg-white dark:bg-card-dark shadow-sm border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-<div class="flex items-center space-x-3">
-<div class="bg-primary p-2 rounded-lg">
-<span class="material-icons text-white text-3xl">lunch_dining</span>
-</div>
-<h1 class="font-display text-4xl tracking-wide text-primary">BURGER'S</h1>
-</div>
-<div class="flex items-center space-x-6">
-<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-icons text-slate-600 dark:text-slate-300">dark_mode</span>
-</button>
-<div class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full">
-<span class="material-icons text-primary">shopping_cart</span>
-<span class="font-semibold">0 Itens</span>
-</div>
-</div>
-</div>
-</header>
-<main class="max-w-7xl mx-auto px-6 py-12 space-y-16">
-<section>
-<div class="flex items-center justify-between mb-8">
-<div class="flex items-center space-x-4">
-<span class="h-8 w-2 bg-secondary rounded-full"></span>
-<h2 class="font-display text-5xl tracking-tight">PEDIDOS</h2>
-</div>
-<p class="text-slate-500 dark:text-slate-400 font-medium italic">Escolha o seu combo favorito</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group relative bg-card-light dark:bg-card-dark rounded-3xl overflow-hidden shadow-lg border border-transparent hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
-<div class="h-64 overflow-hidden relative">
-<img alt="Delicious Burger Combo 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3khTRFFphiVvKsQODgk8YwLMIdkwWieL6JacH1eo4ZZGGLlC_vzhfLnCgztmFzDjw6uAsNUz3Ns6PDZDR2n68zPIvCNIoTqwLfCbDIqbC6eGFhw-5NS0Tqc8p8SIGZaGRogJYdC2nmcQFRdqfDtnazocC6u1mFJ4HmTOX6n_tQTr78qXwlLWUe4JAafZgCJ5IORr02ZBDwEFYlsMWqF-1MUO0ViUAApPUklD4fUKR2I-W_LbSGpudzRQ8G9gQVGgZ8jo0Unw4Fxs4"/>
-<div class="absolute top-4 right-4 bg-primary text-white font-bold px-3 py-1 rounded-full text-sm">POPULAR</div>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-2xl font-bold font-display tracking-wide">COMBO 01 - CLASSIC</h3>
-<span class="text-primary font-bold text-xl">R$ 34,90</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Pão brioche, burger 180g, queijo cheddar derretido, alface crespa, tomate e molho especial + batata média + refri.</p>
-<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary py-3 rounded-xl font-bold transition-colors flex items-center justify-center space-x-2">
-<span class="material-icons text-sm">add_shopping_cart</span>
-<span>ADICIONAR AO PEDIDO</span>
-</button>
-</div>
-</div>
-<div class="group relative bg-card-light dark:bg-card-dark rounded-3xl overflow-hidden shadow-lg border border-transparent hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
-<div class="h-64 overflow-hidden relative">
-<img alt="Delicious Burger Combo 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXXQ8_o0sr0k32gmG66qp7UjuuudpBTsu_sCd7DE48jvngY8wkjmaMIq_Bddt1LnmfGvXSMHzPvX9R4X10QKaChnCkdqPxUBWrHXbElhWCa_EBVtji5e4fpEzzIJazUohdczdHULNT81Kn45kFGrkC1PvOUQKmzUwkSum2ZU2FDbNE0x7ul3jVdkru09pqaUXhiVcW2cAo9Efk0HtSOVtZoCyWlcZGbA4xp-ywYTAlucY9rey9L_u3bXW45B-oSPrc-ylu9EHa2p1Z"/>
-<div class="absolute top-4 right-4 bg-secondary text-black font-bold px-3 py-1 rounded-full text-sm">TOP SELLER</div>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-2xl font-bold font-display tracking-wide">COMBO 02 - BACON LOVER</h3>
-<span class="text-primary font-bold text-xl">R$ 39,90</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Burger duplo 2x 150g, muito bacon crocante, cebola caramelizada e maionese defumada + batata rústica + refri.</p>
-<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary py-3 rounded-xl font-bold transition-colors flex items-center justify-center space-x-2">
-<span class="material-icons text-sm">add_shopping_cart</span>
-<span>ADICIONAR AO PEDIDO</span>
-</button>
-</div>
-</div>
-<div class="group relative bg-card-light dark:bg-card-dark rounded-3xl overflow-hidden shadow-lg border border-transparent hover:border-primary transition-all duration-300 transform hover:-translate-y-2">
-<div class="h-64 overflow-hidden relative">
-<img alt="Delicious Burger Combo 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPDFOIbygxBKrhuqUa7rbTs5VPRdW1bXpH4wmmNwZPE6jSs95W7MaCMOPe_ou-SjzWu3ps3gb3VSjRkGYNYXl7deoZ-Tz-o8xqX7zQdCc1GMw-0gNx_IANzg87u_g5vZlN67Ifikh9agApUNH48PjreWthUzGDHzMjiPsZuJADpNDmiktfMm23_NSK71r-RszcKc34yk7rxVss5q08oK0xb1ky3I1EgNje716v2Hmt9ofpGcaJfijz-8eHXyQo-SOL4HpcKHUvbDGW"/>
-</div>
-<div class="p-6">
-<div class="flex justify-between items-start mb-2">
-<h3 class="text-2xl font-bold font-display tracking-wide">COMBO 03 - VEGGIE DELIGHT</h3>
-<span class="text-primary font-bold text-xl">R$ 36,90</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Hambúrguer de grão de bico, queijo prato vegetal, rúcula fresca e tomate seco no pão australiano + salada + suco natural.</p>
-<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary py-3 rounded-xl font-bold transition-colors flex items-center justify-center space-x-2">
-<span class="material-icons text-sm">add_shopping_cart</span>
-<span>ADICIONAR AO PEDIDO</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<section class="bg-slate-100 dark:bg-card-dark/50 rounded-[40px] p-8 md:p-12">
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-<div class="space-y-4 max-w-md">
-<div class="flex items-center space-x-4">
-<span class="h-8 w-2 bg-primary rounded-full"></span>
-<h2 class="font-display text-5xl tracking-tight">PAGAMENTO</h2>
-</div>
-<p class="text-slate-500 dark:text-slate-400">Escolha como deseja finalizar sua compra de forma rápida e segura.</p>
-<div class="p-6 bg-white dark:bg-card-dark rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800">
-<div class="flex justify-between items-center mb-4">
-<span class="text-slate-500 dark:text-slate-400">Subtotal</span>
-<span class="font-semibold">R$ 0,00</span>
-</div>
-<div class="flex justify-between items-center pb-4 border-b border-slate-100 dark:border-slate-800">
-<span class="text-slate-500 dark:text-slate-400">Entrega</span>
-<span class="text-green-500 font-medium">Grátis</span>
-</div>
-<div class="flex justify-between items-center pt-4">
-<span class="text-lg font-bold">Total</span>
-<span class="text-2xl font-bold text-primary">R$ 0,00</span>
-</div>
-</div>
-</div>
-<div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 h-fit">
-<button class="group relative flex flex-col items-center justify-center p-8 bg-white dark:bg-card-dark border-2 border-transparent hover:border-primary rounded-3xl shadow-sm transition-all duration-300 active:scale-95 overflow-hidden">
-<div class="absolute -top-10 -right-10 w-24 h-24 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-<div class="mb-4 p-4 bg-primary/10 rounded-2xl text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-<span class="material-icons text-4xl">credit_card</span>
-</div>
-<span class="font-display text-2xl tracking-wide">CARTÃO</span>
-<span class="text-xs text-slate-400 uppercase mt-1">Crédito ou Débito</span>
-</button>
-<button class="group relative flex flex-col items-center justify-center p-8 bg-white dark:bg-card-dark border-2 border-transparent hover:border-primary rounded-3xl shadow-sm transition-all duration-300 active:scale-95 overflow-hidden">
-<div class="absolute -bottom-10 -left-10 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-<div class="mb-4 p-4 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl text-emerald-600 dark:text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
-<span class="material-icons text-4xl">qr_code_2</span>
-</div>
-<span class="font-display text-2xl tracking-wide">PIX</span>
-<span class="text-xs text-slate-400 uppercase mt-1">Pagamento Instantâneo</span>
-</button>
-<button class="sm:col-span-2 w-full bg-primary text-white py-5 rounded-2xl font-display text-2xl tracking-widest hover:bg-red-700 transition-colors shadow-xl shadow-primary/20 mt-4">
-                        FINALIZAR PEDIDO
-                    </button>
-</div>
-</div>
-</section>
-</main>
-<footer class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-200 dark:border-slate-800 text-center">
-<div class="flex flex-col items-center space-y-4">
-<div class="flex items-center space-x-2 text-primary">
-<span class="material-icons">local_fire_department</span>
-<span class="font-display text-2xl">Os melhores burgers da cidade</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 Burger's LTDA. Todos os direitos reservados.</p>
-</div>
-</footer>
 
-</body></html>
+<body>
+
+    <header>
+        <h1>Meu Site...</h1>
+    </header>
+
+    <div class="conteudo">
+
+        <h2>Primeira Imagem</h2>
+
+        <!-- Imagem à esquerda -->
+        <img src="i533682.jpeg"
+             alt="Imagem Exemplo 1"
+             class="imagem-esquerda">
+
+        <p>
+            Este é um exemplo de texto envolvendo uma imagem posicionada à esquerda.
+            O efeito é criado utilizando a propriedade CSS chamada <strong>float</strong>.
+            Dessa forma, o texto ocupa automaticamente o espaço disponível ao lado da imagem.
+        </p>
+
+        <p>
+            Esse tipo de estrutura foi muito utilizado em sites, blogs e portais de notícias
+            para organizar conteúdo visual junto com textos descritivos.
+            A margem adicionada na imagem melhora o espaçamento visual.
+        </p>
+
+        <div class="limpar"></div>
+
+    </div>
+
+    <div class="conteudo2">
+
+        <h2>Segunda Imagem</h2>
+
+        <!-- Imagem à direita -->
+        <img src="images.jpg"
+             alt="Imagem Exemplo 2"
+             class="imagem-direita">
+
+        <p>
+            Neste segundo exemplo, a imagem foi posicionada à direita da tela.
+            O texto passa a ocupar o lado esquerdo automaticamente.
+            Esse comportamento também é feito com a propriedade
+            <strong>float: right</strong>.
+        </p>
+
+        <p>
+            A utilização de imagens com texto ao redor ajuda na organização visual,
+            deixando o site mais agradável e moderno.
+            Além disso, o uso de bordas arredondadas melhora o acabamento visual das imagens.
+        </p>
+
+        <div class="limpar"></div>
+
+    </div>
+
+<div class="conteudo">
+
+        <h2>Terceira Imagem</h2>
+
+        <!-- Imagem à esquerda -->
+        <img src="20250922_00_albert_einstein.jpg"
+             alt="Imagem Exemplo 1"
+             class="imagem-esquerda">
+
+        <p>
+            Este é um exemplo de texto envolvendo uma imagem posicionada à esquerda.
+            O efeito é criado utilizando a propriedade CSS chamada <strong>float</strong>.
+            Dessa forma, o texto ocupa automaticamente o espaço disponível ao lado da imagem.
+        </p>
+
+        <p>
+            Esse tipo de estrutura foi muito utilizado em sites, blogs e portais de notícias
+            para organizar conteúdo visual junto com textos descritivos.
+            A margem adicionada na imagem melhora o espaçamento visual.
+        </p>
+
+        <div class="limpar"></div>
+
+    </div>
+
+
+
+    <footer>
+        <p>© 2026 - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+</html>
